@@ -1,0 +1,21 @@
+name: 'install to IIS'
+description: 'Unzips the given file and deploys it to an IIS tier'
+
+inputs:
+  file:
+    description: 'The name of the file to be downloaded.'
+    required: true
+  target:
+    description: 'Target file path.'
+    required: false
+#  token:
+#    description: 'The GitHub token. Typically this will be secrets.GITHUB_TOKEN'
+#    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.file }}
+    - ${{ inputs.target }}
+
