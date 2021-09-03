@@ -8,6 +8,15 @@ inputs:
   target:
     description: 'Target file path.'
     required: false
+  smb_source:
+    description: 'Source for config files'
+    required: true
+  smb_source_username:
+    description: 'Username for samba connection to config files'
+    required: true
+  smb_source_password:
+    description: 'Password for samba connection to config files'
+    required: true
 #  token:
 #    description: 'The GitHub token. Typically this will be secrets.GITHUB_TOKEN'
 #    required: true
@@ -18,4 +27,7 @@ runs:
   args:
     - ${{ inputs.file }}
     - ${{ inputs.target }}
+    - ${{ inputs.smb_source }}
+    - ${{ inputs.smb_source_username }}
+    - ${{ inputs.smb_source_password }}
 

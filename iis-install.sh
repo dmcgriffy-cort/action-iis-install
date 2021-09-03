@@ -7,6 +7,6 @@ fi
 
 echo $INPUT_FILE
 
-echo $(smbclient -h)
+echo $(smbclient -U $INPUT_SMB_SOURCE_USERNAME%$INPUT_SMB_SOURCE_PASSWORD -L $INPUT_SMBSOURCE)
 
 
