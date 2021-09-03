@@ -5,8 +5,8 @@ if [[ -z "$INPUT_FILE" ]]; then
   exit 1
 fi
 
-echo $INPUT_FILE
+echo "Input file: $INPUT_FILE"
 
-echo $(smbclient -U $INPUT_SMB_SOURCE_USERNAME%$INPUT_SMB_SOURCE_PASSWORD -L $INPUT_SMBSOURCE)
+echo $(smbclient -U '$INPUT_SMB_SOURCE_USERNAME%$INPUT_SMB_SOURCE_PASSWORD' -L $INPUT_SMBSOURCE)
 
 
