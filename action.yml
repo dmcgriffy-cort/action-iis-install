@@ -8,8 +8,11 @@ inputs:
   target:
     description: 'Target file path.'
     required: false
-  smb_source:
-    description: 'Source for config files'
+  smb_source_share:
+    description: 'Source share point for config files'
+    required: true
+  smb_source_directory:
+    description: 'Source directory for config files'
     required: true
   smb_source_username:
     description: 'Username for samba connection to config files'
