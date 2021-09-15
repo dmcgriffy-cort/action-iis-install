@@ -13,7 +13,7 @@ echo "SMB Soure Username: $INPUT_SMB_SOURCE_USERNAME%$INPUT_SMB_SOURCE_PASSWORD"
 echo $(smbclient "$INPUT_SMB_SOURCE_SHARE" \
   -U "$INPUT_SMB_SOURCE_USERNAME%$INPUT_SMB_SOURCE_PASSWORD" \
   -D "$INPUT_SMB_SOURCE_DIRECTORY" \
-  -c 'get *')
+  -c 'mget')
 
 echo $(ls -R)
 
